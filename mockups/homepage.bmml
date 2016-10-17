@@ -1,0 +1,14 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1499" measuredH="766" mockupW="1233" mockupH="746">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="266" y="20" w="1233" h="746" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Testifier%0Ahttp%3A//testifier.com/%7Binstructor%7D/</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::StickyNote" x="649" y="209" w="309" h="211" measuredW="109" measuredH="123" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>This%20would%20list%20active%20/%20recent%20activity%3A%0A%20%0A-%20repository%0A-%20test%20method%0A-%20exception%20message%0A-%20student%0A%20%0APossibly%20might%20show%20a%20comfort%20to%20panic%20graph</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

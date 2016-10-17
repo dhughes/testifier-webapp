@@ -1,0 +1,92 @@
+body{
+    font-family: sans-serif;
+    background-color: #6B7A8F;
+    margin: 0.5em;
+}
+
+h1{
+    margin: -0.5em -0.5em 0.5em -0.5em;
+    padding: 0.5em 0.5em 0.3em 0.5em;
+    background-color: #F7882F;
+}
+
+span{
+    padding: 0.1em;
+}
+
+#attempt{
+    border: 1px solid lightgray;
+    background-color: #EEEEEE;
+}
+
+.student>span{
+    color: white;
+    font-weight: bold;
+}
+
+.student>span:first-child::after, .class>span:first-child::after, .project>span:first-child::after{
+    margin-left: 0.5em;
+    content: ">";
+    color: black;
+}
+
+.method{
+    margin: 0.5em 0;
+    display: block;
+}
+
+.testMethod{
+    display: block;
+    margin: 0.25em 0;
+}
+
+.testMethod span:first-child{
+    display: inline-block;
+    padding-right: 1em;
+}
+
+.method{
+    font-size: large;
+    font-weight: bold;
+    color: #F9C231;
+}
+
+.testMethod{
+    color: black;
+    background-color: #DBC8AA;
+}
+
+.result.success, .result.failure, .result.exception{
+    display: inline-block;
+    width: 0.25em;
+    margin: 0 -0.075em;
+    height: 0.75em;
+    overflow: hidden;
+    border: 1px solid black;
+    color: transparent;
+}
+
+.result.success{
+    background-color: green;
+}
+
+.result.exception{
+    background-color: red;
+}
+
+.result.failure{
+    background-color: orange;
+}
+
+.close{
+    position: relative;
+    z-index: 100;
+    float: right;
+    width: 2em;
+    margin: 0.25em 0.25em -2em;
+    
+}
+
+.syntaxhighlighter, .syntaxhighlighter .line.alt1, .syntaxhighlighter .line.alt2{
+    background-color: transparent!important;
+}
