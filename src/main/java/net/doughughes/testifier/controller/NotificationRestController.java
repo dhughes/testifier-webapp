@@ -18,7 +18,6 @@ public class NotificationRestController {
     @Autowired
     private SimpMessagingTemplate template;
 
-
     @RequestMapping(path = "/notify", method = RequestMethod.POST)
     public String receiveNotification(@RequestBody Notification notification){
         service.saveNotification(notification);

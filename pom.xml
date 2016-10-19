@@ -52,7 +52,7 @@
         <dependency>
             <groupId>net.doughughes</groupId>
             <artifactId>testifier-rule</artifactId>
-            <version>1.0.4-SNAPSHOT</version>
+            <version>LATEST</version>
         </dependency>
 
         <dependency>

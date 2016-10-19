@@ -76,14 +76,22 @@ function getOrCreateRecord(recordType, parentRecord, recordName, displayName) {
 
 }
 
-function getMethodSignature(notification) {
-    var methodName = notification.methodName + "(";
+function getSignature(notification) {
+    var name = "";
 
-    methodName += notification.methodArguments.join(", ");
+    if(notification.methodName.length > 0) {
+        name = notification.methodName;
+    } else {
+        name = notification.className;
+    }
 
-    methodName += ")";
+    name += "(";
 
-    return methodName;
+    name += notification.arguments.join(", ");
+
+    name += ")";
+
+    return name;
 }
 
 function getStackTrace(notification){
@@ -109,7 +117,7 @@ function updateStudentRecord(notification){
     var classRecord = getOrCreateRecord("class", projectRecord, notification.className);
 
     // get the method being tested
-    var methodRecord = getOrCreateRecord("method", classRecord, getMethodSignature(notification));
+    var methodRecord = getOrCreateRecord("method", classRecord, getSignature(notification));
 
     // get the test itself
     var testMethodRecord = getOrCreateRecord("testMethod", methodRecord, notification.testMethodName + "()");
@@ -141,7 +149,7 @@ function updateStudentRecord(notification){
             // show this code
             $(this).parent().after(attemptClosure(
                 {
-                    code: notification.methodSource,
+                    code: notification.methodSource.length ? notification.methodSource : notification.constructorSource,
                     result: notification.result,
                     exceptionMessage: notification.result !== "success" ? notification.exception.message : null,
                     stackTrace: notification.result !== "success" ? getStackTrace(notification) : null
